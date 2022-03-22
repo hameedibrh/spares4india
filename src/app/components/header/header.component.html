@@ -1,4 +1,4 @@
-<header class="header header-dark">
+<header class="header">
     <a href="#" class="nav-btn">
         <span></span>
         <span></span>
@@ -7,44 +7,73 @@
     <div class="top-panel">
         <div class="container">
             <div class="top-panel-cover">
-                <div class="top-panel-left">
-                    <ul class="header-cont">
-                        <li><a href="tel:+918489018222"><i class="fa fa-phone"></i>+91 84890 18222</a></li>
-                        <li><a href="mailto:info@spares4india.com"><i class="fa fa-envelope" aria-hidden="true"></i>info@spares4india.com</a></li>
-                    </ul>
-                </div>
-                <div class="top-panel-center">
-                    <a href="index.html" class="logo"><img src="assets/img/logo-white.png" alt="logo"></a>
-                </div>
-                <div class="top-panel-right">
-                    <ul class="icon-right-list">
-                        <li><a class="header-like" href="#"><i class="fa fa-heart" aria-hidden="true"></i><span>6</span></a></li>
-                        <li><a class="header-user" href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-                        <li><a class="header-cart" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
-                    </ul>
-                </div>
+                <ul class="header-cont">
+                    <li><a href="tel:+91 84890 18222"><i class="fa fa-phone"></i>+91 84890 18222</a></li>
+                    <li><a href="mailto:info@spares4india.com"><i class="fa fa-envelope" aria-hidden="true"></i>info@spares4india.com</a></li>
+                </ul>
+                <ul class="icon-right-list">
+                    <li><a class="header-like" href="#"><i class="fa fa-heart" aria-hidden="true"></i><span>6</span></a></li>
+                    <li><a class="header-user" href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                    <li><a class="header-cart" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                </ul>
             </div>
         </div>
     </div>
     <div class="header-menu">
         <div class="container">
+                       
+<!-- Topmenu - start -->
+<div class="header-bottom">
+    <div class="container">
+        <nav class="topmenu">
+
+            <!-- Catalog menu - start -->
+            <div class="topcatalog">
+                <a class="topcatalog-btn" ><span>All</span> Categories</a>
+                <ul class="topcatalog-list">
+                    <li *ngFor="let item of categories" >
+                        <a (click)="fetchSubCategories(item._id)">
+                            {{item.name}}
+                        </a>
+                        <i class="fa fa-angle-right"></i>
+                        <ul>
+                            <li *ngFor="let subitem of subcategories" >
+                               <a (click)="fetchSubCategories2(subitem._id)">
+                                                {{subitem.name}}
+                                            </a>
+                         <i class="fa fa-angle-right"></i>
+                         <ul>
+                            <li *ngFor="let subitem2 of subcategories2" >
+                               <a (click)="showProductPage(subitem2._id)">
+                                                {{subitem2.product_name}}
+                                            </a>
+                            </li>
+</ul>
+                            </li>
+                                    </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- Catalog menu - end -->
+
+            
+           
+
+        </nav>		</div>
+</div>
+<!-- Topmenu - end -->
+            <a href="index.html" class="logo"><img src="assets/img/logo.png" width=200px alt="logo"></a>
             <nav class="nav-menu">
                 <ul class="nav-list">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">Shop</a></li>
-                    <li><a href="">Gallery</a></li>
-                    <li><a href="">Contacts</a></li>
+                    <li class="dropdown">
+                        <a href="#">Home </a>
+                    </li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
                 </ul>
             </nav>
-            <div class="header-two-search">
-                <div class="header-search-icon"><img src="assets/img/loop-icon.svg" alt=""></div>
-                <form class="subscribe-form">
-                    <i class="fa fa-at" aria-hidden="true"></i>
-                    <input class="inp-form" type="email" name="subscribe" placeholder="E-mail">
-                    <button type="submit" class="btn btn-form btn-green"><span>send</span></button>
-                </form>
-            </div>
         </div>
     </div>
 </header>

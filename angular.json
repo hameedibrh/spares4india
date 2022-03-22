@@ -28,9 +28,21 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/slick.min.css",
+              "src/assets/css/bootstrap-grid.css",
+              "src/assets/css/font-awesome.min.css",
+              "src/assets/css/nice-select.css",
+              "src/assets/css/animate.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery-2.2.4.min.js",
+              "src/assets/js/slick.min.js",
+              "src/assets/js/jquery.nice-select.js",
+              "src/assets/js/wow.js",
+              "src/assets/js/lazyload.min.js",
+              "src/assets/js/scripts.js"
+            ]
           },
           "configurations": {
             "production": {
